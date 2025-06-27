@@ -1,0 +1,63 @@
+@font-face {
+    font-family: 'Sonny Gothic Condensed';
+    src: url('/assets/fonts/SonnyGothic-Book.woff2') format('woff2'),
+        url('/assets/fonts/SonnyGothic-Book.woff') format('woff'),
+        url('/assets/fonts/SonnyGothic-Book.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    font-family: 'Sonny Gothic Condensed', sans-serif;
+}
+
+.dropdown-toggle::after {
+    display: none !important;
+}
+
+.mask-hover {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.mask-hover img {
+    transition: transform 0.4s ease;
+    -webkit-transition: transform 0.4s ease;
+    -moz-transition: transform 0.4s ease;
+    -ms-transition: transform 0.4s ease;
+    -o-transition: transform 0.4s ease;
+}
+
+.mask-hover:hover img {
+    transform: scale(1.05);
+    filter: brightness(80%);
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    -webkit-filter: brightness(80%);
+}
+
+.mask-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    -webkit-transition: opacity 0.4s ease;
+    -moz-transition: opacity 0.4s ease;
+    -ms-transition: opacity 0.4s ease;
+    -o-transition: opacity 0.4s ease;
+}
+
+.mask-hover:hover .mask-overlay {
+    opacity: 1;
+}
